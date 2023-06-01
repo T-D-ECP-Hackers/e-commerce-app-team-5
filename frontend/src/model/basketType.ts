@@ -1,6 +1,6 @@
-import {basketProduct} from "./basketProductType";
+import { basketProduct } from "./basketProductType";
 
 export type basket = {
-    basketProducts: basketProduct[];
-    totalProducts: number;
-}
+  basketProducts: basketProduct[];
+  totalProducts: number;
+};

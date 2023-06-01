@@ -1,6 +1,6 @@
-import {product} from "./productType";
+import { product } from "./productType";
 
 export type basketProduct = {
-    product: product;
-    quantity: number
-}
+  product: product;
+  quantity: number;
+};
