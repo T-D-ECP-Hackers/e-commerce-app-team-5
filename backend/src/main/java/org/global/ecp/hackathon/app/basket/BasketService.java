@@ -28,6 +28,7 @@ public class BasketService {
 
         BasketProduct basketProduct = basketProductService.createBasketProduct(getBasket(), productId);
         basketProduct.increaseQuantity();
+        basketRepository.add(basketProduct);
         return null;
     }
 
