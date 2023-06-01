@@ -13,6 +13,14 @@ function CheckoutSummary({
   const basket = useContext(BasketContext);
   const navigate = useNavigate();
 
+  const playAudio = async () => {
+    const audio = new Audio(
+      "https://p.scdn.co/mp3-preview/4eec31d974fd622ac7858affd9759f2017dd87e4?cid=0b297fa8a249464ba34f5861d4140e58"
+    );
+    audio.load();
+    await audio.play();
+  };
+
   let totalCostOfItems = getTotalCostOfProducts(basket.currentBasket);
   let shippingCost = getShippingCost(totalCostOfItems);
 
@@ -49,6 +57,7 @@ function CheckoutSummary({
       getTotalCost(totalCostOfItems, shippingCost)
     );
     checkout(basket.setCurrentBasket, navigate);
+    playAudio();
   }
 
   return (

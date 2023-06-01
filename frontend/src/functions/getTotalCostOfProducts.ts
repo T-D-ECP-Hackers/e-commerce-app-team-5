@@ -12,7 +12,8 @@ export function getTotalCostOfProducts(currentBasket: basket | null) {
   }
 
   currentProductsInBasket.forEach((currentProductInBasket) => {
-    totalCost += currentProductInBasket.product.price;
+    totalCost +=
+      currentProductInBasket.product.price * currentProductInBasket.quantity;
   });
 
   return totalCost;

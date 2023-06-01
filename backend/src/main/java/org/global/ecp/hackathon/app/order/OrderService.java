@@ -1,5 +1,6 @@
 package org.global.ecp.hackathon.app.order;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,8 +23,18 @@ public class OrderService {
 
     // TODO - Task 9: implement this method
     public UUID createOrder(final OrderRequest orderRequest) {
+        UUID randomId = UUID.randomUUID();
+        LocalDateTime timeNow = LocalDateTime.now();
 
-        return null;
+        if (orderRequest.getBasket().equals(null)) {
+            return null;
+        }
+
+        Order newOrder = new Order(randomId, timeNow, orderRequest.getTotalCost(), orderRequest.getBasket().getBasketProducts());
+
+        orderRepository.addOrder(newOrder);
+
+        return randomId;
     }
 
     public List<Order> getAllOrders() {
