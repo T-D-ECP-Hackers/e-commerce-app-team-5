@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import BasketContext from "../../context/BasketContext";
 import {addProductToBasket, removeProductFromBasket} from "../../api/fetchBasket";
+import bandImg from '../../assets/images/Backstreet.png.webp';
 
 function Product(props: { id: number; name: string; description: string; price: number; }) {
 
@@ -11,6 +12,7 @@ function Product(props: { id: number; name: string; description: string; price: 
         <div className="product">
             <div className="product-id">{id}</div>
             <div className="product-name">{name}</div>
+            <img className='product-img' src={bandImg} alt='backstreet-image' />
             <div className="product-description">{description}</div>
             <div className="product-price">£{price}</div>
             <button className="add-to-basket"

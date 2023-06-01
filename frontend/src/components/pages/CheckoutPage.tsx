@@ -26,17 +26,20 @@ function CheckoutPage() {
         <div className={showCheckoutSummary ? "checkout-page-summary" : "checkout-page"}>
             {showCheckoutSummary ? <CheckoutSummary setShowCheckoutSummary={setShowCheckoutSummary}/> :
                 <>
-                    <div className="header-container">
-                        <div className="checkout-button" onClick={() => setShowCheckoutSummary(true)}>
-                            <h1>Total Cost of Products - £ {getTotalCostOfProducts(basket.currentBasket)}</h1>
-                            <h1>Checkout
-                                - {basket.currentBasket == null ? 0 : basket.currentBasket.totalProducts} Products</h1>
-                        </div>
-                    </div>
+                   
                     <CheckoutBody basket={getBasket(basket.currentBasket)}/>
                 </>
-            }
+            } 
+            <div className="header-container">
+            <div className="checkout-button" onClick={() => setShowCheckoutSummary(true)}>
+                <h1>Total Cost of Products - £ {getTotalCostOfProducts(basket.currentBasket)}</h1>
+                <h1>Checkout
+                    - {basket.currentBasket == null ? 0 : basket.currentBasket.totalProducts} Products</h1>
+            </div>
         </div>
+        </div>
+
+
     );
 }
 

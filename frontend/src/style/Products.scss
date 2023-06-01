@@ -21,7 +21,7 @@
   grid-template-columns: 10% 25% 25% 10% 15% 15%;
   padding: 2%;
   font-weight: bolder;
-  border-bottom: 0.25em solid black;
+  border-bottom: 0.25em solid rgb(15, 107, 124);
 }
 
 .product {
@@ -29,4 +29,9 @@
   grid-template-rows: 100%;
   grid-template-columns: 10% 25% 25% 10% 15% 15%;
   margin: 2%;
+}
+
+.product-img {
+  height: 100px;
+  width: 50%;
 }

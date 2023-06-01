@@ -9,7 +9,10 @@ function Header() {
     const navigate = useNavigate();
     return (
         <div className="page-header">
-            <h1 onClick={() => goToHomePage(navigate)}>Hackstreet Boys</h1>
+            <h1 onClick={() => goToHomePage(navigate)}>
+                <span className='hackstreet-header'>Hackstreet </span> 
+                <span className='boys-header'>Boys</span>
+            </h1>
             <NavigationBar/>
         </div>
     );
