@@ -17,11 +17,19 @@
 }
 
 .products-block {
-  width: 80%;
-  height: 50vh;
-  background-color: rgba(5, 5, 5, 0.085);
+  width: 70%;
+  height: 85vh;
+  background-image: url('../assets/images/Products.png');
+  background-size: 1000px;
   border-radius: 0.5em;
   text-align: center;
+  padding-top: 1.3%;
   display: grid;
   align-items: center;
+  font-size: larger;
+  font-style:italic;
+}
+
+.hack-header {
+color: rgba(0, 0, 0, 0.317)
 }

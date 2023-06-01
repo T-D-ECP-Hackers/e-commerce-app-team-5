@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import CheckoutOption from "../checkout/CheckoutOption";
 
 function NavigationBar() {
-
     return (
         <div className="navigation-bar">
             <Link to={`products`}>Products</Link>
@@ -12,5 +11,4 @@ function NavigationBar() {
         </div>
     );
 }
-
 export default NavigationBar;
