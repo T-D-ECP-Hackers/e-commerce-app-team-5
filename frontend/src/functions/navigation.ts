@@ -1,17 +1,17 @@
-import {NavigateFunction} from "react-router-dom";
+import { NavigateFunction } from "react-router-dom";
 
 export function goToHomePage(navigate: NavigateFunction) {
-    navigate("/");
+  navigate("/");
 }
 
 export function goToProductsPage(navigate: NavigateFunction) {
-    navigate("/products");
+  navigate("/products");
 }
 
 export function goToCheckout(navigate: NavigateFunction) {
-    navigate("/checkout");
+  navigate("/checkout");
 }
 
 export function goToOrdersPage(navigate: NavigateFunction) {
-    navigate("/orders");
+  navigate("/orders");
 }
